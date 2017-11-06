@@ -12,8 +12,9 @@
 ## Challenges
 
 1. Add components for Alert
-2. Add components for Card
-3. Add components for Forms and Fields
+2. Add components for Progress
+3. Add components for Card
+4. Add components for Forms and Fields
 
 ## Info
 
