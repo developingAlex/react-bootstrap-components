@@ -44,6 +44,7 @@ class App extends Component {
             <FormGroup
               id='emailField'
               label='Email address'
+              size='lg'
               ControlComponent={ FormControls.Email }
               placeholder='name@example.com'
             />

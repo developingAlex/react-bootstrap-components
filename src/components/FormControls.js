@@ -1,14 +1,25 @@
 import React from 'react'
 
+const formControlClass = ({
+  size
+}) => {
+  let className = 'form-control'
+  if (size) {
+    className += ` form-control-${size}`
+  }
+  return className
+}
+
 const Input = ({
   type,
   id,
-  placeholder
+  placeholder,
+  size
 }) => [
   <input
     type={ type }
     id={ id }
-    className='form-control'
+    className={ formControlClass({ size }) }
     placeholder={ placeholder }
   />
 ]
@@ -27,11 +38,12 @@ export const Password = (props) => (
 
 export const Select = ({
   id,
+  size,
   children
 }) => (
   <select
     id={ id }
-    className='form-control'
+    className={ formControlClass({ size }) }
   >
     { children }
   </select>
