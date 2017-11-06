@@ -15,14 +15,14 @@ const Input = ({
   id,
   placeholder,
   size
-}) => [
+}) => (
   <input
     type={ type }
     id={ id }
     className={ formControlClass({ size }) }
     placeholder={ placeholder }
   />
-]
+)
 
 export const Text = (props) => (
   <Input type='text' { ...props } />
