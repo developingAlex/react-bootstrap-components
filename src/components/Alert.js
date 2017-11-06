@@ -2,15 +2,14 @@ import React from 'react'
 
 const Alert = ({
   children,
-  variation = 'dark'
-}) => {
-  return (
-    <div
-      className={ `alert alert-${variation}` }
-    >
-      { children }
-    </div>
-  )
-}
+  variation = 'info'
+}) => (
+  <div
+    className={ `alert alert-${variation}` }
+    role='alert'
+  >
+    { children }
+  </div>
+)
 
 export default Alert
