@@ -7,6 +7,7 @@ import Alert from './components/Alert'
 import Card, { CardText } from './components/Card'
 import FormGroup from './components/FormGroup'
 import * as FormControls from './components/FormControls'
+import FormCheck from './components/FormCheck'
 
 class App extends Component {
   render() {
@@ -65,6 +66,10 @@ class App extends Component {
               <option>4</option>
               <option>5</option>
             </FormGroup>
+            <FormCheck
+              id='newsletterCheck'
+              label='Subscribe to newsletter'
+            />
             <Button submit title='Submit' />
           </form>
         </div>
