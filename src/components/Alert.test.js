@@ -10,21 +10,24 @@ it('renders without crashing', () => {
 
 it('renders children', () => {
   expect(
-    shallow(<Alert>Message</Alert>).contains('Message')
-  ).toBeTruthy()
+    shallow(<Alert>Message</Alert>)
+  ).toHaveText('Message')
 
   expect(
-    shallow(<Alert><p>Paragraph</p></Alert>).contains(<p>Paragraph</p>)
-  ).toBeTruthy()
+    shallow(<Alert><p>Paragraph</p></Alert>)
+  ).toContainReact(<p>Paragraph</p>)
 })
 
 it('renders variations', () => {
-  const el1 = shallow(<Alert />)
-  expect(el1.hasClass('alert')).toBeTruthy()
+  expect(
+    shallow(<Alert />)
+  ).toHaveClassName('alert')
 
-  const el2 = shallow(<Alert variation='dark' />)
-  expect(el2.hasClass('alert-dark')).toBeTruthy()
+  expect(
+    shallow(<Alert variation='dark' />)
+  ).toHaveClassName('alert-dark')
 
-  const el3 = shallow(<Alert variation='danger' />)
-  expect(el3.hasClass('alert-danger')).toBeTruthy()
+  expect(
+    shallow(<Alert variation='danger' />)
+  ).toHaveClassName('alert-danger')
 })

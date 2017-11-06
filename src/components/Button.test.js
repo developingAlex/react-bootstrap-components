@@ -9,35 +9,41 @@ it('renders without crashing', () => {
 })
 
 it('renders title', () => {
-  const el = shallow(<Button title='The title' />)
-
-  expect(el.text()).toBe('The title')
+  expect(
+    shallow(<Button title='The title' />)
+  ).toHaveText('The title')
 })
 
 it('renders appropriate tag', () => {
-  const el1 = shallow(<Button />)
-  expect(el1.type()).toBe('button')
+  expect(
+    shallow(<Button />)
+  ).toHaveTagName('button')
 
-  const el2 = shallow(<Button href='/' />)
-  expect(el2.type()).toBe('a')
+  expect(
+    shallow(<Button href='/' />)
+  ).toHaveTagName('a')
 
-  const el3 = shallow(<Button href='https://www.example.com/' />)
-  expect(el3.type()).toBe('a')
+  expect(
+    shallow(<Button href='https://www.example.com/' />)
+  ).toHaveTagName('a')
 })
 
 it('renders links', () => {
-  const el = shallow(<Button href='https://www.example.com/' />)
-
-  expect(el.prop('href')).toBe('https://www.example.com/')
+  expect(
+    shallow(<Button href='https://www.example.com/' />)
+  ).toHaveProp('href', 'https://www.example.com/')
 })
 
 it('renders variations', () => {
-  const el1 = shallow(<Button />)
-  expect(el1.hasClass('btn')).toBeTruthy()
+  expect(
+    shallow(<Button />)
+  ).toHaveClassName('btn')
 
-  const el2 = shallow(<Button variation='dark' />)
-  expect(el2.hasClass('btn-dark')).toBeTruthy()
+  expect(
+    shallow(<Button variation='dark' />)
+  ).toHaveClassName('btn-dark')
 
-  const el3 = shallow(<Button variation='danger' />)
-  expect(el3.hasClass('btn-danger')).toBeTruthy()
+  expect(
+    shallow(<Button variation='danger' />)
+  ).toHaveClassName('btn-danger')
 })
