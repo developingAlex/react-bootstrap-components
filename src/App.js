@@ -5,11 +5,13 @@ import './bootstrap-4.0.0-beta.2-dist/css/bootstrap.css'
 import Button from './components/Button'
 import Alert from './components/Alert'
 import Card, { CardText } from './components/Card'
+import FormGroup from './components/FormGroup'
+import * as FormControls from './components/FormControls'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='container'>
         <div className='d-flex justify-content-around mt-3'>
           <Button title='Google' href='https://www.google.com/' />
           <Button title='Second' variation='primary' />
@@ -36,6 +38,34 @@ class App extends Component {
             <h4>With top image</h4>
             <p className='card-text'>Lorem ipsum</p>
           </Card>
+        </div>
+        <div className='mt-3'>
+          <form>
+            <FormGroup
+              id='emailField'
+              label='Email address'
+              ControlComponent={ FormControls.Email }
+              placeholder='name@example.com'
+            />
+            <FormGroup
+              id='passwordField'
+              label='Password'
+              ControlComponent={ FormControls.Password }
+              placeholder='Awesome password'
+            />
+            <FormGroup
+              id='select'
+              label='Select'
+              ControlComponent={ FormControls.Select }
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </FormGroup>
+            <Button submit title='Submit' />
+          </form>
         </div>
       </div>
     );
