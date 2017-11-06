@@ -21,7 +21,7 @@ class App extends Component {
           <Alert variation='info'>Seals can hold their breath for 2 hours which is a record in the animal world.</Alert>
         </div>
         <div className='mt-3'>
-        <Card
+          <Card
             header='Header'
             mb={ 3 }
           >
