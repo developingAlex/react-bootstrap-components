@@ -2,7 +2,7 @@ import React from 'react'
 
 const Alert = ({
   children,
-  variation = 'dark'
+  variation = 'info'
 }) => {
   return (
     <div
