@@ -1,3 +1,9 @@
+## Getting Started
+
+```sh
+yarn install
+```
+
 ## Notes
 
 - At its most simplest, a React component is a function that returns an HTML element
