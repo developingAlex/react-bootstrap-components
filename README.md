@@ -1,3 +1,5 @@
+previous (and first) react exercise: [react-flight-booking](https://github.com/developingAlex/react-flight-booking)
+
 ## Getting Started
 
 ```sh
@@ -7,11 +9,11 @@ yarn install
 ## Notes
 
 - At its most simplest, a React component is a function that returns an HTML element
-- The React component function takes key-value pairs called 'props' — very similar to HTML attributes. However, the keys can be named whatever you like.
+- The React component function takes key-value pairs called 'props' — very similar to HTML attributes. However, the keys can be named whatever you like.
 - React components can also render (return) other React components
 - You can bundle up a lot of power in one React component —  multiple HTML elements for example
 - Things nested inside a rendered component become accessible as the `children` prop
-- React component can dynamically change what HTML tag it will use — e.g. use `<a>` when `href` prop is passed, otherwise use `<button>`
+- React component can dynamically change what HTML tag it will use — e.g. use `<a>` when `href` prop is passed, otherwise use `<button>`
 - String interpolation is great for punching prop values into class names
 
 
